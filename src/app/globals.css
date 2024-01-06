@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-light: #f0f0f0;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--foreground-light);
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--foreground-light))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+//
+
+/* styles/globals.css */
+/* body {
+  font-family: "Arial, sans-serif";
+}
+
+.avatar-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.palette {
+  display: flex;
+  justify-content: space-around;
+}
+
+.category {
+  margin-right: 20px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar-part {
+  cursor: pointer;
+  margin: 5px;
+}
+
+.avatar-preview {
+  margin-top: 20px;
+  display: flex;
+}
+
+.avatar-preview img {
+  margin: 0 5px;
+} */
+
+/* styles/globals.css */
+body {
+  font-family: "Arial, sans-serif";
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar-generator {
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.palette {
+  /* display: flex; */
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.category {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar-part {
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.2s;
+}
+
+.avatar-part:hover {
+  transform: scale(1.1);
+}
+
+.avatar-preview {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  height: 400px;
+  background: #b3aaff;
+}
+
+.avatar-preview img {
+  margin: 0 5px;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.avatar-preview img.hair,
+.avatar-preview img.eyes,
+.avatar-preview img.body,
+.avatar-preview img.mouth,
+.avatar-preview img.mustache,
+.avatar-preview img.blush {
+  z-index: 5;
+}
+
+.avatar-preview img.glasses {
+  z-index: 6;
+}
+
+.avatar-preview img.face {
+  z-index: 1;
+}
+.avatar-preview img.skinColor {
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.palette {
+  width: 40%; /* Adjust as needed */
+}
+
+.category {
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.avatar-part {
+  cursor: pointer;
+  margin: 5px;
+  transition: transform 0.2s;
+}
+
+.avatar-part:hover {
+  transform: scale(1.1);
+}
+
+.avatar-preview img {
+  margin: 0 5px;
+  border-radius: 8px;
+}
+
+/* styles/globals.css */
+/* Add or update these styles */
+.avatar-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.avatar-tabs button {
+  background-color: #f4f4f4;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.avatar-tabs button.active {
+  background-color: #ddd;
+}
+
+.tabs-container {
+  flex-direction: column;
+}
