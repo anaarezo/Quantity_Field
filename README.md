@@ -1,3 +1,8 @@
+# React Avatar Generator
+
+<img width="1337" alt="Screenshot 2024-01-06 at 17 25 15" src="https://github.com/anaarezo/react-avatar-generator/assets/13490305/a6882772-10eb-4406-acec-ba4f2d148628">
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
