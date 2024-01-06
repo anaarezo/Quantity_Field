@@ -5,7 +5,6 @@ interface AvatarPartProps {
   category: string;
   part: string;
   alt: string;
-  skinColor?: string;
   onSelect: (category: string, part: string) => void;
 }
 
@@ -14,7 +13,6 @@ export const AvatarPart: React.FC<AvatarPartProps> = ({
   part,
   alt,
   onSelect,
-  skinColor,
 }) => {
   const handleClick = () => {
     onSelect(category, part);
@@ -30,12 +28,8 @@ export const AvatarPart: React.FC<AvatarPartProps> = ({
       <Image
         src={`/assets/${category}/${part}.svg`}
         alt={alt}
-        width={80}
+        width={90}
         height={37}
-        // style={{
-        //   fill: category === "skinColor" && color ? color : "currentColor",
-        // }}
-        style={{ "--skin-color": skinColor } as React.CSSProperties}
         onError={handleImageError}
       />
     </div>

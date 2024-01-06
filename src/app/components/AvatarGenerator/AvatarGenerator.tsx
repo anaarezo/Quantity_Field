@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Palette, AvatarPreview, AvatarPart } from "../index";
 import AvatarTabs from "../AvatarTabs/AvatarTabs";
-import MergedAvatar from "../MergeAvatar/MergeAvatar";
 
 const AvatarGenerator: React.FC = () => {
   const [selections, setSelections] = useState<Record<string, string>>({
@@ -40,7 +39,6 @@ const AvatarGenerator: React.FC = () => {
 
   return (
     <div className="avatar-generator">
-      <MergedAvatar selections={selections} />
       <div className="layout-container">
         <AvatarPreview selections={selections} />
         <div className="tabs-container">

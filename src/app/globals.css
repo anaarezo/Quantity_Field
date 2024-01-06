@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400&display=swap");
+
 :root {
   --foreground-light: #f0f0f0;
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: #262626;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -17,76 +19,26 @@
   }
 }
 
+* {
+  font-family: "Nunito Sans", sans-serif !important;
+  font-weight: 300;
+}
 body {
   color: rgb(var(--foreground-rgb));
-  background: var(--foreground-light);
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--foreground-light))
-    )
-    rgb(var(--background-start-rgb)); */
-}
-
-//
-
-/* styles/globals.css */
-/* body {
-  font-family: "Arial, sans-serif";
-}
-
-.avatar-generator {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.palette {
-  display: flex;
-  justify-content: space-around;
-}
-
-.category {
-  margin-right: 20px;
-}
-
-.options {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.avatar-part {
-  cursor: pointer;
-  margin: 5px;
-}
-
-.avatar-preview {
-  margin-top: 20px;
-  display: flex;
-}
-
-.avatar-preview img {
-  margin: 0 5px;
-} */
-
-/* styles/globals.css */
-body {
-  font-family: "Arial, sans-serif";
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
+  background: #262626;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .layout-container {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .avatar-generator {
   max-width: 1200px;
   margin: 50px auto;
-  background-color: #fff;
+  background-color: #fafafa;
   padding: 20px;
   border-radius: 8px;
 }
@@ -105,21 +57,15 @@ h1 {
 .category {
   width: 100%;
   margin-bottom: 20px;
+  display: none;
 }
 
+.category.active {
+  display: flex;
+}
 .options {
   display: flex;
   flex-wrap: wrap;
-}
-
-.avatar-part {
-  cursor: pointer;
-  margin: 5px;
-  transition: transform 0.2s;
-}
-
-.avatar-part:hover {
-  transform: scale(1.1);
 }
 
 .avatar-preview {
@@ -163,22 +109,13 @@ h1 {
   color: #333;
 }
 
-.palette {
-  width: 40%; /* Adjust as needed */
-}
-
 .category {
   margin-bottom: 20px;
 }
 
-.options {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .avatar-part {
   cursor: pointer;
-  margin: 5px;
+  margin: 2px;
   transition: transform 0.2s;
 }
 
@@ -186,30 +123,33 @@ h1 {
   transform: scale(1.1);
 }
 
+.avatar-part img {
+  background-color: #ecf0f1;
+}
+
 .avatar-preview img {
   margin: 0 5px;
   border-radius: 8px;
 }
 
-/* styles/globals.css */
-/* Add or update these styles */
 .avatar-tabs {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
 }
 
 .avatar-tabs button {
-  background-color: #f4f4f4;
+  background-color: #fafafa;
   border: none;
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
+  color: #8e8a86;
 }
 
 .avatar-tabs button.active {
-  background-color: #ddd;
+  background-color: #ecf0f1;
+  color: #978bff;
 }
 
 .tabs-container {
   flex-direction: column;
+  width: 50%;
 }
